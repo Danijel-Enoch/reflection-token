@@ -733,12 +733,12 @@ contract DividendPayingToken is DividendPayingTokenInterface, DividendPayingToke
   mapping(address => uint256) public totalDividendsDistributed;
   
   constructor(){
-      IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24); // router 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24
+      IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D); // router 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
       uniswapV2Router = _uniswapV2Router; 
       
       // Mainnet
 
-      rewardTokens.push(address(0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA)); // USDbC - 0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA
+      rewardTokens.push(address(0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee)); // WeEth - 0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee
       
       nextRewardToken = rewardTokens[0];
   }
@@ -1269,7 +1269,7 @@ contract PRINTER is ERC20, Ownable {
         
         operationsWallet = address(0x143979Edc5335C70BEBc2e0b22eF2983B8892e46); // set as operations wallet
 
-        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24);//0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24
+        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);//0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
         
          // Create a uniswap pair for this new token
         address _uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
